@@ -40,9 +40,9 @@ def departure_view(request, departure):
     return render(request, 'departure.html', direction_template)
 
 
-def tour_view(request, id):
-    info = data.tours[id]
-    info['rus_departure'] = data.departures[data.tours[id]['departure']]
+def tour_view(request, pk):
+    info = data.tours[pk]
+    info['rus_departure'] = data.departures[data.tours[pk]['departure']]
     info['dep'] = data.departures
     return render(request, 'tour.html', info)
 
