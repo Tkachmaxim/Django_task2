@@ -1,7 +1,11 @@
 import operator
+
 from random import sample
+
 from django.shortcuts import render
+
 from django.http import HttpResponseBadRequest, HttpResponseServerError
+
 from tours import data
 
 
