@@ -19,9 +19,9 @@ import tours.views as tour
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', tour.main_view),
-    path('departure/<str:departure>/', tour.departure_view),
-    path('tour/<int:pk>/', tour.tour_view)
+    path('', tour.main_view, name='index'),
+    path('departure/<str:departure>/', tour.departure_view, name='departure'),
+    path('tour/<int:pk>/', tour.tour_view, name='tour')
 ]
 
 handler400 = tour.c_handler400

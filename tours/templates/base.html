@@ -16,7 +16,7 @@
         <ul class="navbar-nav">
           {%for link, departure in departures.items%}
           <li {% if rus_departure == departure%} class="nav-item active" {% endif %}>
-            <a class="nav-link" href="/departure/{{link}}">{{departure}}</a>
+            <a class="nav-link" href="{% url 'departure' link %}">{{departure}}</a>
           </li>
           {%endfor%}
         </ul>
